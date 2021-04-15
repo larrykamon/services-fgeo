@@ -24,7 +24,13 @@ Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.cr
 
 Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
 
+Route::get('cursos/alls', [CursoController::class, 'alls'])->name('cursos.alls');
+
 Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show');
 
 Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+
+Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
+
+
 
