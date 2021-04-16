@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use App\Models\Expediente;
 use App\Models\Involucrado;
+use App\Models\Ofeindi;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\New_;
 
@@ -49,6 +50,10 @@ class CursoController extends Controller
 
     public function alls(){
         return response()->json(Expediente::where('subprocuradurias_id', 15)->get(),200);
+    }
+
+    public function delitosByExpedientes($expedientes_id){
+        return response()->json(Ofeindi::where('expedientes_id', $expedientes_id)->get(),200);
     }
 
 

@@ -32,5 +32,8 @@ Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('curso
 
 Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
 
+Route::get('cursos/delitosByExpedientes/{expedientes_id}', [CursoController::class, 'delitosByExpedientes'])->name('cursos.delitosByExpedientes');
+
+
 
 
